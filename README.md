@@ -18,10 +18,6 @@
 
   Enjoy!
 
-
-## Description
-
-
 ## Classes
 
 ### Game
