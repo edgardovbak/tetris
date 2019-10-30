@@ -3,14 +3,19 @@
 ## Using
   Download the repositori, extract the files. 
   In folder with game run
+  
     ```
     npm install
     ```
+    
   the default command is 
+  
     ```
     gulp
     ```
+    
   Open index.html
+  
 
   In browser you see  the start screen. Press Enter to start the game.
   Use arrows to controll the pieces.
