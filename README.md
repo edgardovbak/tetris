@@ -1,8 +1,8 @@
 ## Its just a first test in game development logic
 
 ## Using
-  Download the repositori, extract the files. 
-  In folder with game run
+  Download the repository, extract the files. 
+  Open command line, go to the folder with the game and run
   
     ```
     npm install
@@ -17,32 +17,32 @@
   Open index.html
   
 
-  In browser you see  the start screen. Press Enter to start the game.
-  Use arrows to controll the pieces.
-  Preass enter to pause the game.
+  In the browser you see the start screen. Press Enter to start the game.
+  Use arrows to control the pieces.
+  Press enter to pause the game.
 
   Enjoy!
 
 ## Classes
 
 ### Game
-This is the core of the game. All functionality that control the game process. 
-The basic idea is saved in 10 x 20 matrix, filled with 0 values. 
-If matrix cell contains something then its filled with 1 value.
-Here are 7 figures like in original teteris game.
-The pieces are choosen randomly. Every piece have own matrix that contain information about piece: type, and rotation.
-Two coocrdinates are minitored that describe the piece position on playfield. 
+This is the core of the game. All functionality that controls the game process. 
+The basic idea is saved in a 10 x 20 matrix, filled with 0 values. 
+If the matrix cell contains something then its filled with 1 value.
+Here are 7 figures like in the original tetris game.
+The pieces are chosen randomly. Every piece have own matrix that contains information about piece: type, and rotation.
+Two coordinates are monitored that describe the piece position on the playfield. 
 
 #### Functions 
 
 #### reset
-  Its used for reset data in game class
+  It's used for reset data in game class
 
 #### level 
-  Return current level. The level depends on the number of lines
+  Return the current level. The level depends on the number of lines
 
 #### getState 
-  Return data that its used in other classes
+  Return data that is used in other classes
 
 #### createPlayfield
   Create an empty playfield 
@@ -51,19 +51,19 @@ Two coocrdinates are minitored that describe the piece position on playfield.
   Create a random piece. Default look without rotating
 
 #### movePieceLeft, movePieceRight, movePieceDown
-  Change piece position on playfield
+  Change piece position on the playfield
 
 #### rotatePiece
-  Rotate piece. The rotating point is the center of the matrix that contain the piece. This function call another function that contain the rotating logic. The rotating is posible only if the piece dont have collision
+  Rotate piece. The rotating point is the center of the matrix that contains the piece. The rotation is possible only if the piece don't have collision
 
 #### rotateBlocks 
-  Thi function contain  the rotation logig.
+  This function contains the rotation logic.
 
 #### hassCollision
-  Detect if the piece have collision
+  Detect if the piece has collision
 
 #### lockPiece
-  If the piece collision with another piese then save the coordinats in playfield
+  If the piece collision with another piece then save the coordinates in the playfield
 
 #### clearLines 
   Remove the filled lines
@@ -72,15 +72,15 @@ Two coocrdinates are minitored that describe the piece position on playfield.
   Update the game score
 
 #### updatePieces 
-  Update the next upcomming piece in game
+  Update the next upcomming piece in the game
 
 ### View 
-This calss controlls the visual part of the game. 
+This class controls the visual part of the game. 
 The game is created with canvas. 
-Requred parameters: 
-a html element, canvas heght and width, rows/columns count.
-This class controll the game playfield, and the pannel with game information (level, speed, score, lines).
-The width/height parameters its for the canwas, rows/columns its for playfield.
+Required parameters: 
+a HTML element, canvas height, and width, rows/columns count.
+This class control the game playfield, and the panel with game information (level, speed, score, lines).
+The width/height parameters it's for the canvas, rows/columns its for playfield.
 
 #### Functions
 
@@ -91,10 +91,10 @@ The width/height parameters its for the canwas, rows/columns its for playfield.
   Clear the canvas
 
 #### renderStartScreen
-  Show the enter csreen before the game its started
+  Show the enter screen before the game its start
 
 #### renderPauseScreen
-  Show screen when the game is stoped
+  Show screen when the game is stopped
 
 #### renderEndScreen
   Game Over screen
@@ -110,8 +110,8 @@ The width/height parameters its for the canwas, rows/columns its for playfield.
 
 
 ### Controller 
-This class controll all user events.
-Required parameters is instance of game and view
+This class control all user events.
+Required parameters are an instance of game and view
 User events: move left/right/down, play/pause game.
-All movemnet calls functions from game class that update playfield matrix. 
-Play/pause call functions from view class and render screen for current event.
+All movement calls functions from the game class that update the playfield matrix. 
+Play/pause call functions from view class and renders screen for the current event.
